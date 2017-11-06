@@ -1,0 +1,16 @@
+{
+  "name": "sphynx",
+  "version": "1.0.0",
+  "description": "Oedipus middleware for authentication",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Ulisses Caon",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
