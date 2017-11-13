@@ -1,6 +1,6 @@
 {
   "name": "sphynx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Oedipus middleware for authentication",
   "main": "app.js",
   "scripts": {
