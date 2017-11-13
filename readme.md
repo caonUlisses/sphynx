@@ -34,8 +34,3 @@ app.get('/auth', (req, res) => {
 })
 
 ```
-
----
-
-ulissescaon@gmail.com
-Ulisses Caon - 2017
