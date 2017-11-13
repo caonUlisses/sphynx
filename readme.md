@@ -33,9 +33,10 @@ app.get('/auth', (req, res) => {
   })
 })
 
-### Real world example
 
 ```
+### Real world example
+
 You can easely plug it into your system and use it, as in:
 
 ```javascript
