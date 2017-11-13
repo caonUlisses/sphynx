@@ -1,11 +1,17 @@
 {
   "name": "sphynx",
   "version": "1.0.22",
-  "description": "Oedipus middleware for authentication",
+  "description": "Middleware for authenticating microservices",
   "main": "app.js",
-  "scripts": {
-    "test": "mocha"
-  },
+  "keywords": [
+    "microservices",
+    "microservice",
+    "docker",
+    "authentication",
+    "security",
+    "jwt",
+    "jsonwebtokens"
+  ],
   "author": "Ulisses Caon",
   "license": "MIT",
   "dependencies": {
