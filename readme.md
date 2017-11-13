@@ -33,4 +33,28 @@ app.get('/auth', (req, res) => {
   })
 })
 
+### Real world example
+
 ```
+You can easely plug it into your system and use it, as in:
+
+```javascript
+const express  = require('express')
+// If you're not using ES6, you can change the line below 
+const {sphynx} = require('sphynx')
+let app = express()
+
+// This one line will take care of requesting your auth server to know if the user is logged in
+app.use(sphynx)
+
+// If you want to use it on specific routes, you can add it like:
+app.get('/foo', sphynx, (req, res, next) => {
+  // your code here
+})
+
+```
+You can access the user object sent over the request if you want to
+
+## Got questions?
+
+ulissescaon@gmail.com
