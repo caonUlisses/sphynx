@@ -24,12 +24,12 @@ It assumes you have a route like:
 // assuming your express() variable is called 'app'
 app.get('/auth', (req, res) => {
   let token = req.header('x-auth')
-    
+
   // just make sure your model have a method that returns a user by token
   User.returnByToken(token).then((user) => {
     res.status(200).send(user)
   }).catch((e) => {
-    res.status(401).send('Não foi possível localizar o usuário')
+    res.status(401).send('Unable to find the user')
   })
 })
 

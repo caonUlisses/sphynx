@@ -15,14 +15,14 @@ let sphynx = (req, res, next) => {
     
     rp(options).then((user) => {
         if(!user) {
-            res.send('Usuário não encontrado')
+            res.send('User not found')
         }
 
         req.user = user 
         next()
 
     }).catch((e) => {
-        res.status(500).send({message: 'Ocorreu um erro'})
+        res.status(500).send({message: 'An error occured', e})
     })
 }
 
