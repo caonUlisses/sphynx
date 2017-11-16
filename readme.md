@@ -29,7 +29,7 @@ app.get('/auth', (req, res) => {
   User.returnByToken(token).then((user) => {
     res.status(200).send(user)
   }).catch((e) => {
-    res.status(401).send('Unable to find the user')
+    res.status(401).send('Unable to find user')
   })
 })
 
