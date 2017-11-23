@@ -33,8 +33,24 @@ app.get('/auth', (req, res) => {
   })
 })
 
+```
+
+Or, if you're using `async`/`await`:
+
+```javascript
+app.get('/auth', async (req, res) => {
+  const token = req.headers('x-auth')
+  try {
+    const user = await User.returnByToken(tone)
+    res.status(200).send(user)
+  }
+  catch(e) {
+    res.status(401).send('Unable to find user')
+  }
+})
 
 ```
+
 ### Real world example
 
 You can easely plug it into your system and use it, as in:
