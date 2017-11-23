@@ -1,6 +1,6 @@
 {
   "name": "sphynx",
-  "version": "1.0.26",
+  "version": "2.0.0",
   "description": "Middleware for authenticating microservices",
   "main": "app.js",
   "keywords": [
