@@ -15,7 +15,6 @@
   "author": "Ulisses Caon",
   "license": "MIT",
   "dependencies": {
-    "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "axios": "^0.17.1"
   }
 }
