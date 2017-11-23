@@ -1,29 +1,24 @@
-const http   = require('http')
-const rp     = require('request-promise')
+const axios  = require('axios')
 const config = require('./config/master')
+const http   = require('http')
 
+const sphynx = async (req, res, next) => {
+    try {
+        const token = req.headers['x-auth']
+        const user  = await axios({
+            method  : 'get',
+            url     : config.target.uri,
+            headers : {
+                "x-auth": token
+            }
+        })
 
-let sphynx = (req, res, next) => {
-    let token = req.headers['x-auth']
-
-    let options = {
-        uri: config.target.uri,
-        headers: {
-            "x-auth": token
-        }
-    }
-    
-    rp(options).then((user) => {
-        if(!user) {
-            res.send('User not found')
-        }
-
-        req.user = user 
+        req.user = user
         next()
 
-    }).catch((e) => {
+    } catch(e) {
         res.status(500).send({message: 'An error occured', e})
-    })
+    }
 }
 
 module.exports = {sphynx}
